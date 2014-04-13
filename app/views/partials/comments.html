@@ -1,0 +1,11 @@
+<div class="row well">
+	<div class="media" ng-repeat="comment in getComments() | orderBy:predicate">
+		<div class="media-object">
+			<h4 class="media-heading">{{comment.username}}</h4>
+			<p>{{comment.comment}}</p>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<input type="text" ng-keypress="addComment($event)" ng-model="commentText" placeholder="Add Your Own Comment!"/>
+</div>
